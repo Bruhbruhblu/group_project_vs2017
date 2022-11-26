@@ -9,8 +9,7 @@
 #include <ctime>
 #include"DateAndTime.h"
 #include"Reserve_Data.h"
-#include<vector>
-#include <iomapic>
+#include <iomanip>
 using namespace std;
 
 
@@ -77,8 +76,48 @@ protected:
 		int End = 0;
 		int id = reserve_datas.size();    //id aotumate generated
 
+		cout << "What is your name? " << endl;
+        	cin.getline(Person, 100, '\n');
+        	
+        
+        
 
+        	cout << "What is your phone number?" << endl;
+        	int j = 0;
+        	while (j < 1)
+        	{
+            		cin >> Phone_Num;
+            		if (Phone_Num < 10000000)
+           	 	{
+               	 	cout << "You need to enter 8 char. number\n"; 
+            		}
+            		else if (Phone_Num > 99999999)
+            		{
+            	    	cout << "You need to enter 8 char. number\n";
+            		}
+            		else
+            		{
+                		j++;
+            		}
+       		}
+        
+        	cout << "What is your email?\n";
+        	cin >> Email;
 
+        	cout << "How many person do you have?" << endl;
+        	int i = 0;
+        	while (i < 1)
+        	{
+            		cin >> Participants_Num;
+            		if (Participants_Num > 100)
+                		cout << "The maximum occupancy of our room is 100" << endl;
+            		else
+                	i++;
+       	 	}
+
+		
+		
+		
 		//check vaild
 		if (1)                      // if no Room available
 		{
