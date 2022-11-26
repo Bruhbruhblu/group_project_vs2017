@@ -6,8 +6,7 @@
 #include <vector>
 #include <ctime>
 
-#include<vector>
-#include <iomapic>
+#include <iomanip>
 using namespace std;
 
 
@@ -106,7 +105,7 @@ public:
 	~Reserve_Data() {
 
 	}
-	inline Reserve_Data operator = (const Reserve_Data& rhs) { SetData(rhs.R_person,rhs.R_address,rhs.R_phone_no,rhs.R_room, rhs.R_no_Participants, rhs.R_date, rhs.R_Start_time, rhs.R_End_time); }
+	inline void operator = (const Reserve_Data& rhs) { SetData(rhs.R_person,rhs.R_address,rhs.R_phone_no,rhs.R_room, rhs.R_no_Participants, rhs.R_date, rhs.R_Start_time, rhs.R_End_time); }
 
 	void SetData(string person, string address, int phone_no, char room, unsigned int no_Participants,
 		Date Booked_date, int Start_time, int End_time)
@@ -136,7 +135,7 @@ public:
 	
 	void alterPerson(string name){R_person = name;}
 	void alterAddress(string address){R_address = address;}
-	void alterphoneNo(int num){R_Phone_no = num;}
+	void alterphoneNo(int num){R_phone_no = num;}
 	void alterDate(Date newdate) { R_date = newdate; }
 	void alterRoom(char newRoom) {
 		R_room = newRoom;
