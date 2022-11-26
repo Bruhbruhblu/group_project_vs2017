@@ -44,7 +44,7 @@ public:
 	
 	void alterPerson(string name){R_person = name;}
 	void alterAddress(string address){R_address = address;}
-	void alterphoneNo(int num){R_Phone_no = num;}
+	void alterphoneNo(int num){R_phone_no = num;}
 	void alterDate(Date newdate) { R_date = newdate; }
 	void alterRoom(char newRoom) {
 		R_room = newRoom;
